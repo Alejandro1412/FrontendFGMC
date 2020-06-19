@@ -3,30 +3,30 @@ import { UsuarioModel } from '../../models/usuario.model';
 import { from } from 'rxjs';
 import { NgForm } from '@angular/forms';
 import { invalid } from '@angular/compiler/src/render3/view/util';
+import {AuthService} from '../../services/auth.service'
 
 
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
-  styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent implements OnInit {
 
   usuario: UsuarioModel;
-
-
-  constructor() { }
+  auth: any;
 
   ngOnInit() {
     this.usuario = new UsuarioModel();
-
-    this.usuario.email = 'alejopola14@hotmail.com';
+    this.usuario.email = 'example@hotmail.com';
   }
+
   onSubmit( form: NgForm ) {
     if ( form.invalid ) { return ; }
-    console.log('Formulario Enviado');
-    console.log(this.usuario);
-    console.log(form);
+
+    this.auth.nuevoUsuario(this.usuario)
+      .subscribe( resp => {
+        console.log(resp);
+      })
   }
 
 

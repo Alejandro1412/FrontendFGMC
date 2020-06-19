@@ -23,7 +23,7 @@
 
                 <span *ngIf="f.submitted && f.controls['password'].errors" class="text-danger animated fadeIn">Minimo 6 caracteres</span>
                 <div class="wrap-input100 m-b-16">
-                    <input class="input100" type="password" [(ngModel)]='usuario.password' required minlength="6" name="password" placeholder="Password">
+                    <input class="input100" type="password" [(ngModel)]='usuario.password' required minlength="6" name="password" placeholder="Contraseña">
                     <span class="focus-input100"></span>
                 </div>
 
@@ -43,6 +43,7 @@
                 </div>
 
                 <div class="container-login100-form-btn m-t-17">
+
                     <button class="login100-form-btn" type="submit">
                             Crear cuenta
                         </button>

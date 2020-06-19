@@ -1,0 +1,27 @@
+<div class="limiter animated fadeInLeft">
+    <div class="container-login100">
+        <div class="wrap-login100 p-t-50 p-b-90">
+            <form (ngSubmit)="crearUnaCategoria(f)" #f="ngForm" class="categoria100-form validate-form flex-sb flex-w">
+
+                <span class="login100-form-title p-b-51">
+                  Categorias
+              </span>
+
+                <!-- <span *ngIf="f.submitted" class="text-danger animated fadeIn">El cargo es obligatorio</span> -->
+
+                <div class="wrap-input100 m-b-16">
+                    <input class="input100" type="text" name="categorias" [(ngModel)]="categorias" placeholder="Nombre Categoria">
+
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="container-login100-form-btn m-t-17">
+                    <button class="login100-form-btn" type="submit">
+                      Agregar Categoria 
+                  </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

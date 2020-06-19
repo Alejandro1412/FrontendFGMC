@@ -1,0 +1,91 @@
+<div class="limiter animated fadeInLeft">
+    <div class="container-login100">
+        <div class="wrap-login100 p-t-50 p-b-90">
+            <form (ngSubmit)="crearUnContrato(f)" #f="ngForm" class="contrato100-form validate-form flex-sb flex-w">
+
+                <span class="login100-form-title p-b-51">
+                Contratos
+            </span>
+
+                <!-- <span *ngIf="f.submitted" class="text-danger animated fadeIn">El cargo es obligatorio</span> -->
+
+                <div class="wrap-input100 m-b-16">
+                    <input class="input100" type="text" name="contratos" [(ngModel)]="contratos" placeholder="Nombre Contrato">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-imput100 m-b-16">
+                    <input class="input100" type="text" placeholder="Lugar expedicion CC">
+
+                </div>
+
+                <div class="wrap-imput100 m-b-16">
+                    <input class="input100" type="text" placeholder="Fecha Nacimiento">
+                </div>
+
+                <div class="wrap-imput100 m-b-16">
+                    <input class="input100" type="text" placeholder="Caja Compensacion">
+                </div>
+
+                <div class="wrap-imput100 m-b-16">
+                    <input class="input100" type="text" placeholder="AFP">
+                </div>
+
+                <div class="wrap-imput100 m-b-16">
+                    <input class="input100" type="text" placeholder="EPS">
+                </div>
+
+                <div class="wrap-imput100 m-b-16">
+                    <input class="input100" type="text" placeholder="Fecha de Ingreso">
+                </div>
+
+                <div class="wrap-imput100 m-b-16">
+                    <input class="input100" type="text" placeholder="Fecha de Retiro">
+                </div>
+
+                <div class="wrap-imput100 m-b-16">
+                    <input class="input100" type="text" placeholder="Salario">
+                </div>
+
+                <div class="wrap-imput100 m-b-16">
+                    <input class="input100" type="text" placeholder="Auxilio por Trayecto">
+                </div>
+
+                <div class="wrap-imput100 m-b-16">
+                    <input class="input100" type="text" placeholder="Auxilio por Transporte">
+                </div>
+                <div class="wrap-imput100 m-b-16">
+                    <input class="input100" type="text" placeholder="Cargo">
+                </div>
+                <div class="wrap-imput100 m-b-16">
+                    <input class="input100" type="text" placeholder="Titulo">
+                </div>
+
+                <div class="wrap-imput100 m-b-16">
+                    <input class="input100" type="text" placeholder="Universidad">
+                </div>
+
+                <div class="wrap-imput100 m-b-16">
+                    <input class="input100" type="text" placeholder="Direccion">
+                </div>
+
+                <div class="wrap-imput100 m-b-16">
+                    <input class="input100" type="text" placeholder="Email">
+                </div>
+
+                <div class="wrap-imput100 m-b-16">
+                    <input class="input100" type="text" placeholder="Observacion">
+                </div>
+
+
+
+                <div class="container-login100-form-btn m-t-17">
+                    <button class="login100-form-btn" type="submit">
+                    Crear Contrato 
+                </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
