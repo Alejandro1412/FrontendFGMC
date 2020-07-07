@@ -11,11 +11,13 @@ import { AppComponent } from './app.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
-import { from } from 'rxjs';
 import { CargoComponent } from './pages/cargo/cargo.component';
 import { ContratosComponent } from './pages/contratos/contratos.component';
 import { CategoriaComponent } from './pages/categoria/categoria.component';
 import { UsuarioComponent } from './pages/usuario/usuario.component';
+import { NavbarComponent } from './pages/navbar/navbar.component';
+
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { UsuarioComponent } from './pages/usuario/usuario.component';
     CargoComponent,
     ContratosComponent,
     CategoriaComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

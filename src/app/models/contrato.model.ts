@@ -1,4 +1,5 @@
 export class contratoModel {
+
     nombreContrato: String;
     lugarExpedicion: String;
     fechaNacimiento: Date;

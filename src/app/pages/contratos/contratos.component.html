@@ -10,71 +10,99 @@
                 <!-- <span *ngIf="f.submitted" class="text-danger animated fadeIn">El cargo es obligatorio</span> -->
 
                 <div class="wrap-input100 m-b-16">
-                    <input class="input100" type="text" name="contratos" [(ngModel)]="contratos" placeholder="Nombre Contrato">
-                    <span class="focus-input100"></span>
+                    <label for="nom">Nombre Contrato</label>
+                    <input class="form-control" type="text" name="nombre" minlength="5" ngModel #nombre="ngModel" required placeholder="Nombre Contrato">
+                </div>
+
+                <div class="wrap-input100 m-b-16">
+                    <label for="lex">Lugar expedicion cc</label>
+                    <input class="form-control" type="text" name="lugarExpedicion" ngModel #lugarExpedicion="ngModel" required placeholder="Lugar expedicion CC">
+
+                </div>
+
+                <div class="wrap-input100 m-b-16">
+                    <label for="fn">Fecha de Nacimiento</label>
+                    <input class="form-control" type="date" name="fechanacimiento" ngModel #fechanacimiento="ngModel" required title="Fecha Nacimiento">
+                </div>
+
+
+                <div class="wrap-input100 m-b-16">
+                    <label for="exampleFormControlSelect1"> Caja de Compensacion</label>
+                    <select class="form-control" id="exampleFormControlSelect1" ngModel #cajacompensacion="ngModel" required name="cajacompensacion">
+                    <option></option>
+                    <option>OPS</option>
+                    <option>COMFAPUTUMAYO</option>
+                    <option>COMFACAUCA</option>
+                  </select>
                 </div>
 
                 <div class="wrap-imput100 m-b-16">
-                    <input class="input100" type="text" placeholder="Lugar expedicion CC">
-
+                    <label for="_afp">AFP</label>
+                    <input class="form-control" type="text" name="afp" ngModel #afp="ngModel" required placeholder="AFP">
                 </div>
 
                 <div class="wrap-imput100 m-b-16">
-                    <input class="input100" type="text" placeholder="Fecha Nacimiento">
+                    <label for="_eps">EPS </label>
+                    <input class="form-control" type="text" name="eps" ngModel #eps="ngModel" required placeholder="EPS">
+                </div>
+
+                <div class="wrap-input100 m-b-16">
+                    <label for="fi">Fecha de Ingreso</label>
+                    <input class="form-control" type="date" name="fechaingreso" ngModel #fechaingreso="ngModel" required title="Fecha Ingreso">
+                </div>
+
+                <div class="wrap-input100 m-b-16">
+                    <label for="fn">Fecha de Retiro</label>
+                    <input class="form-control" type="date" name="fecharetiro" ngModel #fecharetiro="ngModel" required title="Fecha Retro">
                 </div>
 
                 <div class="wrap-imput100 m-b-16">
-                    <input class="input100" type="text" placeholder="Caja Compensacion">
+                    <label for="_salario">Salario</label>
+                    <input class="form-control" type="number" name="salario" ngModel #salario="ngModel" required placeholder="Salario">
                 </div>
 
                 <div class="wrap-imput100 m-b-16">
-                    <input class="input100" type="text" placeholder="AFP">
+                    <label for="auxTrayec">Auxilio por Trayecto</label>
+                    <input class="form-control" type="number" name="auxTrayecto" ngModel #auxTrayecto="ngModel" required placeholder="Auxilio por Trayecto">
                 </div>
 
                 <div class="wrap-imput100 m-b-16">
-                    <input class="input100" type="text" placeholder="EPS">
+                    <label for="auxTranspo">Auxilio por Transporte</label>
+                    <input class="form-control" type="number" name="auxTransporte" ngModel #auxTransporte="ngModel" required placeholder="Auxilio por Transporte">
+                </div>
+                <div class="wrap-imput100 m-b-16">
+                    <label for="cargo">Cargo</label>
+                    <input class="form-control" type="text" name="cargo" ngModel #cargo="ngModel" required placeholder="Cargo">
                 </div>
 
                 <div class="wrap-imput100 m-b-16">
-                    <input class="input100" type="text" placeholder="Fecha de Ingreso">
+                    <label for="titulo">Titulo</label>
+                    <input class="form-control" type="text" name="titulo" ngModel #titulo="ngModel" required placeholder="Titulo">
                 </div>
 
                 <div class="wrap-imput100 m-b-16">
-                    <input class="input100" type="text" placeholder="Fecha de Retiro">
+                    <label for="universidad">Universidad</label>
+                    <input class="form-control" type="text" name="universidad" ngModel #universidad="ngModel" required placeholder="Universidad">
                 </div>
 
                 <div class="wrap-imput100 m-b-16">
-                    <input class="input100" type="text" placeholder="Salario">
+                    <label for="telefono">Telefono</label>
+                    <input class="form-control" type="number" name="telefono" ngModel #telefono="ngModel" required placeholder="Telefono">
                 </div>
 
                 <div class="wrap-imput100 m-b-16">
-                    <input class="input100" type="text" placeholder="Auxilio por Trayecto">
+                    <label for="dir">Direccion</label>
+                    <input class="form-control" type="text" name="direccion" ngModel #direccion="ngModel" required placeholder="Direccion">
                 </div>
 
                 <div class="wrap-imput100 m-b-16">
-                    <input class="input100" type="text" placeholder="Auxilio por Transporte">
-                </div>
-                <div class="wrap-imput100 m-b-16">
-                    <input class="input100" type="text" placeholder="Cargo">
-                </div>
-                <div class="wrap-imput100 m-b-16">
-                    <input class="input100" type="text" placeholder="Titulo">
+                    <label for="email">Correo Electronico</label>
+                    <input class="form-control" type="text" name="email" ngModel #email="ngModel" required placeholder="Email">
                 </div>
 
                 <div class="wrap-imput100 m-b-16">
-                    <input class="input100" type="text" placeholder="Universidad">
-                </div>
-
-                <div class="wrap-imput100 m-b-16">
-                    <input class="input100" type="text" placeholder="Direccion">
-                </div>
-
-                <div class="wrap-imput100 m-b-16">
-                    <input class="input100" type="text" placeholder="Email">
-                </div>
-
-                <div class="wrap-imput100 m-b-16">
-                    <input class="input100" type="text" placeholder="Observacion">
+                    <label for="obs"> Observacion</label>
+                    <input class="form-control" type="text" name="observacion" ngModel #observacion="ngModel" required placeholder="Observacion">
                 </div>
 
 

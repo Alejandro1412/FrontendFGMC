@@ -10,7 +10,7 @@ export class ContratosService {
 
   contratos: contratoModel[];
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {   }
 
 
     obtenerContratos() { 

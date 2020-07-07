@@ -13,17 +13,18 @@ import { contratoModel } from '../../models/contrato.model';
 })
 
 export class ContratosComponent implements OnInit {
+  
   contratos: any;
   contrato: any;
 
 
-  constructor(private ContratosService: ContratosService) {
+  constructor(private contratosService: ContratosService) {
     //this.obtenerTodosContratos();
     //console.log(this.contrato); 
 
   }
   obtenerTodosContratos() {
-    this.ContratosService.obtenerContratos().subscribe( res => {
+    this.contratosService.obtenerContratos().subscribe( res => {
       this.contratos = res;
       console.log(this.contratos)
 
@@ -38,7 +39,7 @@ export class ContratosComponent implements OnInit {
   }
 
   obtenerUnContrato(_id) {
-    this.ContratosService.obtenerContrato(_id).subscribe( res => {
+    this.contratosService.obtenerContrato(_id).subscribe( res => {
       this.contratos = res;
       console.log(this.contratos)
 
@@ -49,13 +50,31 @@ export class ContratosComponent implements OnInit {
     )
   }
 
-  crearUnContrato(form: NgForm) {
+  crearUnContrato(f: NgForm) {
+    console.log(f.value.nombre);
     this.contrato = {
-      nombreCargo: form.value.cargos
+      nombreContrato: f.value.nombre,
+      lugarExpedicion: f.value.lugarExpedicion,
+      fechaNacimiento: f.value.fechanacimiento,
+      CajaCompensacion: f.value.cajacompensacion,
+      afp_FondoPensiones: f.value.afp,
+      eps: f.value.eps,
+      fechaIngreso: f.value.fechaingreso ,
+      fechaRetiro: f.value.fecharetiro ,
+      salario: f.value.salario,
+      auxilioporTrayecto: f.value.auxTrayecto,
+      auxilioporTransporte: f.value.auxTransporte,
+      cargo: f.value.cargo,
+      titulo: f.value.titulo,
+      universidad: f.value.universidad,
+      telefono: f.value.telefono,
+      direccion: f.value.direccion,
+      email: f.value.email,
+      observacion: f.value.observacion
     }
 
     console.log(this.contrato);
-    this.ContratosService.crearContrato(this.contrato).subscribe( res => {
+    this.contratosService.crearContrato(this.contrato).subscribe( res => {
     })
     error => {
       console.log(JSON.stringify(error))
@@ -63,7 +82,7 @@ export class ContratosComponent implements OnInit {
   }
 
   eliminarUnContrato(_id){
-    this.ContratosService.eliminarContrato(_id).subscribe( res =>{
+    this.contratosService.eliminarContrato(_id).subscribe( res =>{
       this.obtenerTodosContratos();
     })
     error => {
